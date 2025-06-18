@@ -3,11 +3,8 @@ import { defineConfig } from 'astro/config';
 import VueRouter from 'unplugin-vue-router/vite'
 import AutoImport from 'unplugin-auto-import/astro'
 import Components from 'unplugin-vue-components/vite'
-
 import vue from '@astrojs/vue';
-
 import react from '@astrojs/react';
-
 
 export default defineConfig({
     // output: 'server',
