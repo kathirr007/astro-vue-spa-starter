@@ -10,7 +10,9 @@ import vue from '@astrojs/vue';
 
 import react from '@astrojs/react';
 
+
 export default defineConfig({
+    // output: 'server',
     integrations: [
         // https://github.com/antfu/unplugin-auto-import
         AutoImport({
