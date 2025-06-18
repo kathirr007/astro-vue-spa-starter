@@ -1,3 +1,7 @@
+
+let __unconfig_data;
+let __unconfig_stub = function (data = {}) { __unconfig_data = data };
+__unconfig_stub.default = (data = {}) => { __unconfig_data = data };
 // @ts-check
 import { defineConfig } from 'astro/config';
 import VueRouter from 'unplugin-vue-router/vite'
@@ -9,7 +13,7 @@ import vue from '@astrojs/vue';
 import react from '@astrojs/react';
 
 
-export default defineConfig({
+const __unconfig_default =  defineConfig({
     // output: 'server',
     integrations: [
         // https://github.com/antfu/unplugin-auto-import
@@ -59,3 +63,4 @@ export default defineConfig({
         ]
     }
 });
+if (typeof __unconfig_default === "function") __unconfig_default(...[]);export default __unconfig_data;

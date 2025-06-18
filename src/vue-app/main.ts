@@ -8,7 +8,6 @@ import { createPinia } from 'pinia';
 
 export default (app: App) => {
 	if (!import.meta.env.SSR) {
-
 		const pinia = createPinia()
 
 		const router = createRouter({
