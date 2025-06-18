@@ -1,10 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import AutoImport from 'unplugin-auto-import/astro'
 import Components from 'unplugin-vue-components/vite'
-import Pages from 'vite-plugin-pages'
 
 import vue from '@astrojs/vue';
 
@@ -17,7 +15,6 @@ export default defineConfig({
             imports: [
                 'vue',
                 '@vueuse/core',
-                VueRouterAutoImports,
                 {
                     // add any other imports you were relying on
                     'vue-router/auto': ['useLink'],
@@ -31,7 +28,7 @@ export default defineConfig({
 
         }),
         vue({
-            appEntrypoint: '/src/vue-app/main.ts'
+            appEntrypoint: '/src/vue-app/main.ts',
         }),
         react(),
     ],
@@ -47,7 +44,6 @@ export default defineConfig({
                     },
                 ],
             }),
-
 
             // https://github.com/antfu/vite-plugin-components
             Components({
