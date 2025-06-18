@@ -27,13 +27,13 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@types/node": "^24.0.3",
     "@vitejs/plugin-vue": "^5.2.4",
     "@vue/tsconfig": "^0.7.0",
     "typescript": "^5.8.3",
     "unplugin-auto-import": "^19.3.0",
     "unplugin-vue-components": "^28.7.0",
     "unplugin-vue-router": "^0.12.0",
-    "vite-plugin-pages": "^0.33.0",
     "vue-tsc": "^2.2.10"
   },
   "peerDependencies": {
