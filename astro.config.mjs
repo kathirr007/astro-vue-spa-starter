@@ -12,7 +12,6 @@ import react from '@astrojs/react';
 
 
 export default defineConfig({
-    // output: 'server',
     integrations: [
         // https://github.com/antfu/unplugin-auto-import
         AutoImport({
@@ -31,7 +30,6 @@ export default defineConfig({
                 './src/vue-app/composables',
             ],
             vueTemplate: true,
-
         }),
         vue({
             appEntrypoint: '/src/vue-app/main.ts'
