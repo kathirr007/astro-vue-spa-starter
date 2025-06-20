@@ -1,5 +1,13 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "moduleResolution": "Bundler",
+    "types": [
+      "unplugin-vue-router/client"
+    ]
+  },
   "include": [
     ".astro/types.d.ts",
     "**/*",
@@ -7,13 +15,5 @@
   ],
   "exclude": [
     "dist"
-  ],
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "moduleResolution": "Bundler",
-    "jsxImportSource": "react",
-    "types": [
-      "unplugin-vue-router/client"
-    ]
-  }
+  ]
 }
