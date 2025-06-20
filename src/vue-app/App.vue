@@ -5,6 +5,11 @@ import { storeToRefs } from 'pinia';
 // const counterStore = useCounterStore();
 const { count, name, doubleCount } = storeToRefs(useCounterStore());
 const { increment, decrement } = useCounterStore();
+
+useHead({
+	title: 'Home',
+	titleTemplate: '%s | Astro vue app',
+})
 </script>
 
 <template>
@@ -12,7 +17,9 @@ const { increment, decrement } = useCounterStore();
 		<a href="/">Home static</a><br>
 		<RouterLink to="/">SPA home</RouterLink><br>
 		<RouterLink to="/about">SPA about</RouterLink> <br>
-		<RouterLink to="/blog">SPA blog page</RouterLink>
+		<RouterLink to="/blog">SPA blog page</RouterLink> <br>
+		<RouterLink to="/test">Test page</RouterLink> <br>
+		<RouterLink to="/contact">Contact page</RouterLink>
 	</nav>
 	<div>
 		<button @click="increment">Inc+</button>
