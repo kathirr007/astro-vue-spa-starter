@@ -1,15 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import AutoImport from 'unplugin-auto-import/astro'
 import Components from 'unplugin-vue-components/vite'
 import { unheadVueComposablesImports } from '@unhead/vue'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 import vue from '@astrojs/vue';
-
 import react from '@astrojs/react';
-
 
 export default defineConfig({
     integrations: [
@@ -32,7 +30,7 @@ export default defineConfig({
             vueTemplate: true,
         }),
         vue({
-            appEntrypoint: '/src/vue-app/main.ts'
+            appEntrypoint: '/src/vue-app/main.ts',
         }),
         react(),
     ],
@@ -48,7 +46,6 @@ export default defineConfig({
                     },
                 ],
             }),
-
 
             // https://github.com/antfu/vite-plugin-components
             Components({
