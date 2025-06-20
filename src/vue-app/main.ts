@@ -1,9 +1,9 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import type { App } from 'vue'
 
-// import Home from './pages/index.vue';
-// import About from './pages/about.vue';
-import { routes } from 'vue-router/auto-routes';
+import Home from './pages/index.vue';
+import About from './pages/about.vue';
+// import { routes } from 'vue-router/auto-routes';
 import { createPinia } from 'pinia';
 
 export default (app: App) => {
@@ -12,8 +12,8 @@ export default (app: App) => {
 
 		const router = createRouter({
 			history: createWebHistory("/vue-app"),
-			routes,
-			/* routes: [
+			// routes,
+			routes: [
 				{
 					path: '/',
 					component: Home
@@ -26,7 +26,7 @@ export default (app: App) => {
 					path: '/blog',
 					component: () => import('./pages/blog.vue')
 				}
-			] */
+			]
 		});
 
 		app.use(pinia);
