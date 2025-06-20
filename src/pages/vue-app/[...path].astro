@@ -2,10 +2,14 @@
 import App from '../../vue-app/App.vue';
 
 export function getStaticPaths() {
+	const vueRoutes = ['about', 'blog', 'test', 'contact']
+
+	const staticPaths =  vueRoutes.map((route) => (
+		{params: {path: route}}
+	))
+
 	return [
-		{ params: { path: "about"}},
-		{ params: { path: "blog"}},
-		{ params: { path: 'test' }},
+		...staticPaths,
 		{ params: { id: undefined}},
 	];
 }
