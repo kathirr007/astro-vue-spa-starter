@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const route = useRoute()
+useHead({
+	title: 'Test',
+})
 </script>
 
 

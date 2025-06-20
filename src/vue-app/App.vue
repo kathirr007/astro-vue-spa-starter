@@ -5,6 +5,11 @@ import { storeToRefs } from 'pinia';
 // const counterStore = useCounterStore();
 const { count, name, doubleCount } = storeToRefs(useCounterStore());
 const { increment, decrement } = useCounterStore();
+
+useHead({
+	title: 'Home',
+	titleTemplate: '%s | Astro vue app',
+})
 </script>
 
 <template>

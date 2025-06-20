@@ -4,6 +4,7 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import AutoImport from 'unplugin-auto-import/astro'
 import Components from 'unplugin-vue-components/vite'
+import { unheadVueComposablesImports } from '@unhead/vue'
 
 import vue from '@astrojs/vue';
 
@@ -19,6 +20,7 @@ export default defineConfig({
                 'vue',
                 '@vueuse/core',
                 VueRouterAutoImports,
+                unheadVueComposablesImports,
                 {
                     // add any other imports you were relying on
                     'vue-router/auto': ['useLink'],

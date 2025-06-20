@@ -1,17 +1,19 @@
-import {createRouter, createWebHistory} from 'vue-router';
+import {createRouter, createWebHistory, type RouteRecordRaw} from 'vue-router';
 import type { App } from 'vue'
 
 import Home from './pages/index.vue';
 import About from './pages/about.vue';
 import * as autoRoutes from 'vue-router/auto-routes';
 import { createPinia } from 'pinia';
+import { createHead } from '@unhead/vue/client'
 
 
-const routes = autoRoutes.routes
+const routes = autoRoutes.routes as readonly RouteRecordRaw[]
 
 export default (app: App) => {
 	if (!import.meta.env.SSR) {
 		const pinia = createPinia()
+		const head = createHead()
 
 		const router = createRouter({
 			history: createWebHistory("/vue-app"),
@@ -32,6 +34,7 @@ export default (app: App) => {
 			] */
 		});
 
+		app.use(head);
 		app.use(pinia);
 		app.use(router);
 	}
