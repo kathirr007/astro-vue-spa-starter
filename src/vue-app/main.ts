@@ -5,8 +5,6 @@ import Home from './pages/index.vue';
 import About from './pages/about.vue';
 import * as autoRoutes from 'vue-router/auto-routes';
 import { createPinia } from 'pinia';
-import { resolveOptions } from 'unplugin-vue-router/options'
-import { type Options, createRoutesContext } from 'unplugin-vue-router'
 
 
 const routes = autoRoutes.routes

@@ -12,7 +12,8 @@ const { increment, decrement } = useCounterStore();
 		<a href="/">Home static</a><br>
 		<RouterLink to="/">SPA home</RouterLink><br>
 		<RouterLink to="/about">SPA about</RouterLink> <br>
-		<RouterLink to="/blog">SPA blog page</RouterLink>
+		<RouterLink to="/blog">SPA blog page</RouterLink> <br>
+		<RouterLink to="/test">Test page</RouterLink>
 	</nav>
 	<div>
 		<button @click="increment">Inc+</button>

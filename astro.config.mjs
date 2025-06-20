@@ -4,7 +4,6 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import AutoImport from 'unplugin-auto-import/astro'
 import Components from 'unplugin-vue-components/vite'
-import Pages from 'vite-plugin-pages'
 
 import vue from '@astrojs/vue';
 
