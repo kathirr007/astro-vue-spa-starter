@@ -31,6 +31,10 @@ export default defineConfig({
         }),
         vue({
             appEntrypoint: '/src/vue-app/main.ts',
+            devtools: {
+                componentInspector: true,
+                launchEditor: 'code'
+            },
         }),
         react(),
     ],

@@ -14,6 +14,12 @@
     "jsxImportSource": "react",
     "types": [
       "unplugin-vue-router/client"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
   }
 }
