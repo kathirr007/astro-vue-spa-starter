@@ -2,18 +2,12 @@
 import App from '@/vue-app/App.vue';
 
 export function getStaticPaths() {
-	const vueRoutes = ['about', 'blog', 'test', 'contact']
+  const vueRoutes = ['about', 'blog', 'test', 'contact']
 
-	const staticPaths =  vueRoutes.map((route) => (
-		{params: {path: route}}
-	))
+  const staticPaths = vueRoutes.map((route) => ({ params: { path: route } }))
 
-	return [
-		...staticPaths,
-		{ params: { id: undefined}},
-	];
+  return [...staticPaths, { params: { id: undefined } }]
 }
-
 ---
 
-<App client:only="vue"></App>
+<App client:only="vue" />

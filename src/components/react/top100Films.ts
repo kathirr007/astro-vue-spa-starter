@@ -5,7 +5,7 @@ const top100Films = [
   { label: 'The Godfather: Part II', year: 1974 },
   { label: 'The Dark Knight', year: 2008 },
   { label: '12 Angry Men', year: 1957 },
-  { label: "Schindler's List", year: 1993 },
+  { label: 'Schindler\'s List', year: 1993 },
   { label: 'Pulp Fiction', year: 1994 },
   {
     label: 'The Lord of the Rings: The Return of the King',
@@ -27,7 +27,7 @@ const top100Films = [
     label: 'The Lord of the Rings: The Two Towers',
     year: 2002,
   },
-  { label: "One Flew Over the Cuckoo's Nest", year: 1975 },
+  { label: 'One Flew Over the Cuckoo\'s Nest', year: 1975 },
   { label: 'Goodfellas', year: 1990 },
   { label: 'The Matrix', year: 1999 },
   { label: 'Seven Samurai', year: 1954 },
@@ -38,7 +38,7 @@ const top100Films = [
   { label: 'City of God', year: 2002 },
   { label: 'Se7en', year: 1995 },
   { label: 'The Silence of the Lambs', year: 1991 },
-  { label: "It's a Wonderful Life", year: 1946 },
+  { label: 'It\'s a Wonderful Life', year: 1946 },
   { label: 'Life Is Beautiful', year: 1997 },
   { label: 'The Usual Suspects', year: 1995 },
   { label: 'Léon: The Professional', year: 1994 },
@@ -116,7 +116,7 @@ const top100Films = [
   { label: 'Dangal', year: 2016 },
   { label: 'The Sting', year: 1973 },
   { label: '2001: A Space Odyssey', year: 1968 },
-  { label: "Singin' in the Rain", year: 1952 },
+  { label: 'Singin\' in the Rain', year: 1952 },
   { label: 'Toy Story', year: 1995 },
   { label: 'Bicycle Thieves', year: 1948 },
   { label: 'The Kid', year: 1921 },
@@ -124,6 +124,6 @@ const top100Films = [
   { label: 'Snatch', year: 2000 },
   { label: '3 Idiots', year: 2009 },
   { label: 'Monty Python and the Holy Grail', year: 1975 },
-];
+]
 
-export default top100Films;
+export default top100Films

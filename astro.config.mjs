@@ -1,13 +1,13 @@
+import react from '@astrojs/react'
+import vue from '@astrojs/vue'
+import { unheadVueComposablesImports } from '@unhead/vue'
 // @ts-check
-import { defineConfig } from 'astro/config';
-import VueRouter from 'unplugin-vue-router/vite'
+import { defineConfig } from 'astro/config'
 import AutoImport from 'unplugin-auto-import/astro'
 import Components from 'unplugin-vue-components/vite'
-import { unheadVueComposablesImports } from '@unhead/vue'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
 
-import vue from '@astrojs/vue';
-import react from '@astrojs/react';
+import { VueRouterAutoImports } from 'unplugin-vue-router'
+import AutoRoute from 'unplugin-vue-router/vite'
 
 export default defineConfig({
     integrations: [
@@ -40,7 +40,7 @@ export default defineConfig({
     ],
     vite: {
         plugins: [
-            VueRouter({
+            AutoRoute({
                 logs: true,
                 dts: true,
                 routesFolder: [
@@ -51,15 +51,15 @@ export default defineConfig({
                 ],
             }),
 
-            // https://github.com/antfu/vite-plugin-components
-            Components({
-                dts: true,
-                directoryAsNamespace: true,
-                deep: true,
-                dirs: [
-                    './src/vue-app/components',
-                ],
-            }),
-        ]
-    }
-});
+      // https://github.com/antfu/vite-plugin-components
+      Components({
+        dts: true,
+        directoryAsNamespace: true,
+        deep: true,
+        dirs: [
+          './src/vue-app/components',
+        ],
+      }),
+    ],
+  },
+})
